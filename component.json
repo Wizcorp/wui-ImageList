@@ -1,0 +1,13 @@
+{
+	"name": "WuiImageList",
+	"repo": "Wizcorp/wui-ImageList",
+	"version": "0.1.0",
+	"description": "Generic image list wui component",
+	"dependencies": {
+		"component/inherit": "*",
+		"Wizcorp/wui-Dom": "0.1.0"
+	},
+	"scripts": [
+		"index.js"
+	]
+}
