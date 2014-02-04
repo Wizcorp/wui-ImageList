@@ -61,6 +61,8 @@ WuiImageList.prototype._parseLoading = function (img, hasSucceed) {
 
 	if (nbTotal === (nbLoaded + nbError)) {
 
+		this.emit('finishedLoading', this.loaded, this.errored);
+
 		if (nbLoaded > 0) {
 			this.emit('loaded', this.loaded);
 		}
