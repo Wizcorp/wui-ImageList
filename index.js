@@ -60,16 +60,7 @@ WuiImageList.prototype._parseLoading = function (img, hasSucceed) {
 	this.emit('loading', { current: img, parsed: nbLoaded + nbError, total: nbTotal });
 
 	if (nbTotal === (nbLoaded + nbError)) {
-
 		this.emit('finishedLoading', this.loaded, this.errored);
-
-		if (nbLoaded > 0) {
-			this.emit('loaded', this.loaded);
-		}
-
-		if (nbError > 0) {
-			this.emit('error', this.errored);
-		}
 	}
 };
 
