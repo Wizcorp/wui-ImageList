@@ -1,4 +1,4 @@
-var inherit = require('inherit');
+var inherits = require('util').inherits;
 var WuiDom = require('WuiDom');
 
 function WuiImageList() {
@@ -14,7 +14,7 @@ function WuiImageList() {
 	this.on('destroy', function () {
 		var images = that.getAll();
 
-		for (var i = 0, len = images.length; i < len; i++) {
+		for (var i = 0, len = images.length; i < len; i += 1) {
 			images[i].destroy();
 		}
 
@@ -23,7 +23,7 @@ function WuiImageList() {
 	});
 }
 
-inherit(WuiImageList, WuiDom);
+inherits(WuiImageList, WuiDom);
 module.exports = WuiImageList;
 
 
@@ -101,7 +101,7 @@ WuiImageList.prototype.load = function () {
 	var images = this.getAll();
 	var i, len = images.length;
 
-	for (i = 0; i < len; i++) {
+	for (i = 0; i < len; i += 1) {
 		images[i].load();
 	}
 
